@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjeta de Cumpleaños</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="scene">
+
+    <!-- Flores decorativas flotantes -->
+    <div class="petal petal-1">🌸</div>
+    <div class="petal petal-2">🌼</div>
+    <div class="petal petal-3">🌺</div>
+    <div class="petal petal-4">✨</div>
+    <div class="petal petal-5">🌸</div>
+    <div class="petal petal-6">💐</div>
+
+    <!-- Tarjeta principal -->
+    <div class="card" id="card">
+
+      <!-- Panel izquierdo: mensaje -->
+      <div class="card-left">
+        <div class="ornament top-ornament">✦ ✦ ✦</div>
+
+        <p class="subtitle">— con todo cariño —</p>
+
+        <h1 class="main-wish">
+          Mis mejores<br/>
+          <em>deseos</em><br/>
+          para ti
+        </h1>
+
+        <div class="divider">
+          <span class="divider-line"></span>
+          <span class="divider-icon">🎀</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <h2 class="birthday-text">¡Feliz<br/>Cumpleaños!</h2>
+
+        <!-- Nombre estático -->
+        <div class="name-wrapper">
+          <span class="person-name">Karla</span>
+        </div>
+
+        <div class="ornament bottom-ornament">✦ ✦ ✦</div>
+      </div>
+
+      <!-- Separador central -->
+      <div class="card-divider">
+        <div class="vertical-dots"></div>
+      </div>
+
+      <!-- Panel derecho: GIF del pastel -->
+      <div class="card-right">
+        <div class="gif-frame">
+          <div class="gif-glow"></div>
+          <img
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGdlajFhamJmaXZ4NG8zc2VoZHN1YTQ0eGpjdzhtYXVzN3oyb3NuMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vj1rq67sws9XcyXFYZ/giphy.gif"
+            alt="Pastel de cumpleaños animado"
+            class="cake-gif"
+            id="cake-gif"
+          />
+        </div>
+
+        <p class="gif-caption">¡Que todos tus<br/>sueños se cumplan!</p>
+
+        <!-- Botón para lanzar confeti -->
+        <button class="celebrate-btn" id="celebrate-btn" onclick="launchConfetti()">
+            Da click aquí. 👀
+        </button>
+      </div>
+
+    </div><!-- /card -->
+  </div><!-- /scene -->
+
+  <script src="script.js"></script>
+</body>
+</html>
